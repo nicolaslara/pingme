@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Name</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="{{ STATIC_URL }}js/functions.js"></script>
+  </head>
+  <body class="container" >
+
+    <div id="container-top">
+      <div id="container-top-text">
+	Just Ping me!
+      </div>
+    </div>
+
+    <section id="container-body-ini">
+      <div id="container-body-ini-form">
+	<div class="wrap">
+	  <span id="check-website">Check your website and make sure it's up and running!</span>
+	  <div class="div-form">
+	    <form id="is-up-form" action="/" method="post">
+              {% csrf_token %}
+	      <input name="txt-web-page" id="txt-web-page" placeholder="Web Page Address. Eg: example.com" type="text" />
+	      <input type="submit" id="is-up-button" value="Check" /><br>
+	      <div id="invalid-url" style="visibility:hidden;">
+		Please enter a valid url.
+	      </div>
+	    </form>
+	  </div>
+	</div>
+      </div>
+      <div id="footer"></div>
+    </section>
+
+
+    <section id="try-on-message" style="display:none;">
+      <div id="try-on-page-message">
+	<div class="wrap">
+	  <div id="is-up-block">
+	    Congratulations! Your website looks good and works fine! <br>
+	    <div id="is-up-block-inner">
+	      Be the first to know when your website is down. Sign up now for free.<br>
+	      <input type="submit" id="find-more-button" value="Learn More" />
+	    </div>
+	  </div>
+	</div>
+      </div>
+      <div id="footer-page-2"></div>
+    </section>
+
+
+    <section id="try-on" style="display:none;">
+      <div id="try-on-page">
+	<div class="wrap">
+	  <div class="payment-methods">
+	    Try it free for 30 days, sign in with paypal<br>
+	    <div id="paypal-section">
+	      <input type="button" class="paypal-button" id="paypal-button" value="Have a Paypal Account?" />
+	      <div id="sign-in" style="display: none;">
+		<img src="{{ STATIC_URL }}/img/close.png" id="close-sign-in">
+		<form id="sign-in-form" action="/success/" method="post">
+                  {% csrf_token %}
+		  <input name="txt-your-email-sign-in" id="txt-your-email-sign-in" placeholder="Your email. Eg: test@domain.com" type="text" />
+		  <input type="submit" id="sign-in-button" value="Sign In" />
+		  <div class="error-email" style="display:none"> Please enter a valid email </div>
+		</form>
+	      </div>
+	    </div>
+
+	    <div id="no-paypal-section">
+	      <input type="button" class="no-paypal-button" id="no-paypal-button" value="Don't Have a Paypal Account Yet?" />
+	      <div id="sign-up" style="display: none;">
+		<img src="{{ STATIC_URL }}/img/close.png" id="close-sign-up">
+		<form id="sign-up-form" action="/success/" method="post">
+                  {% csrf_token %}
+		  <input name="txt-your-email-sign-up" id="txt-your-email-sign-up" placeholder="Your email. Eg: test@domain.com" type="text" />
+		  <input type="submit" id="sign-up-button" value="Sign Up" />
+		  <div class="error-email" style="display:none"> Please enter a valid email </div>
+		</form>
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+      </div>
+      <div id="footer-page-3"></div>
+    </section>
+  </body>
+</html>

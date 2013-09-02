@@ -1,0 +1,519 @@
+html {
+  height: 100%;
+}
+
+* {
+	margin: 0;
+	paddig: 0;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+input[type="text"]{
+	color: #333;
+	margin: 0 1px 1px;
+	padding: 13px 9px ;
+	background: #fff;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px inset;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px inset;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px inset;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #05376d;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	outline: none;
+	font-size: 14px;
+	line-height: normal;
+	-webkit-appearance: none;
+	border: none;
+}
+
+.container {
+  height: 100%;
+}
+
+.container #container-top {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}
+
+.container #container-top img {
+  padding: 40px;
+  padding-left: 80px;
+}
+
+.container section {
+	text-align: center;
+	background: #4c9cc4; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #4c9cc4 0%, #1773b1 48%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4c9cc4), color-stop(48%,#1773b1)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #4c9cc4 0%,#1773b1 48%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #4c9cc4 0%,#1773b1 48%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #4c9cc4 0%,#1773b1 48%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #4c9cc4 0%,#1773b1 48%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c9cc4', endColorstr='#1773b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+.container h2 {
+	margin: 0 0 60px;
+	font-size: 42px;
+	line-height: 56px;
+	letter-spacing: -1px;
+	font-style: normal;
+	font-weight: 800;
+	color: #1c599c;
+}
+
+#container-body-ini {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+	color: #fff;
+}
+
+#try-on-message {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+	color: #fff;
+	background: #9dcbdb; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #9dcbdb 0%, #388be4 99%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#9dcbdb), color-stop(99%,#388be4)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #9dcbdb 0%,#388be4 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #9dcbdb 0%,#388be4 99%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #9dcbdb 0%,#388be4 99%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #9dcbdb 0%,#388be4 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dcbdb', endColorstr='#388be4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#try-on {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+	color: #fff;
+	background: #a9ccd8; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #a9ccd8 1%, #71a8e2 99%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(1%,#a9ccd8), color-stop(99%,#71a8e2)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #a9ccd8 1%,#71a8e2 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #a9ccd8 1%,#71a8e2 99%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #a9ccd8 1%,#71a8e2 99%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #a9ccd8 1%,#71a8e2 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9ccd8', endColorstr='#71a8e2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+#paypal-section{
+	float: left;
+	margin-left: 25%;
+}
+
+#no-paypal-section{
+	float: right;
+	margin-right: 25%;
+	position: relative;
+}
+
+#try-on-page, #try-on-page-message {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#try-on-page .wrap, #try-on-page-message .wrap {
+	display: table-cell;
+	vertical-align: middle;
+	width: 600px;
+}
+
+#try-on-page .payment-methods, #try-on-page #is-up-block {
+	font-size: 48px;
+	font-family: 'Love Ya Like A Sister', cursive;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#try-on-page .paypal-button {
+	margin-top: 50px;
+	border: 0;
+	padding: 0;
+	width: 320px;
+	font-size: 15px;
+	font-weight: 800;
+	display: inline-block;
+	background: #47ba42;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 65px;
+	height: 65px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+	cursor: pointer;
+	border-bottom: 2px solid #36a032;
+}
+
+#try-on-page .paypal-button:hover {
+	background: #4dc447;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#try-on-page .paypal-button:active {
+	background: #41b03c;
+}
+
+#try-on-page .no-paypal-button {
+	margin-top: 50px;
+	border: 0;
+	padding: 0;
+	width: 320px;
+	font-size: 15px;
+	font-weight: 800;
+	display: inline-block;
+	background: #47ba42;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 65px;
+	height: 65px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+	cursor: pointer;
+	border-bottom: 2px solid #36a032;
+}
+
+#try-on-page .no-paypal-button:hover {
+	background: #4dc447;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#try-on-page .no-paypal-button:active {
+	background: #41b03c;
+}
+
+
+#try-on-page .selected {
+	margin-top: 50px;
+	border: 0;
+	padding: 0;
+	width: 320px;
+	font-size: 15px;
+	font-weight: 800;
+	display: inline-block;
+	background: #368B32;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 65px;
+	height: 65px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+	cursor: pointer;
+	border-bottom: 2px solid rgb(2, 94, 2);
+}
+
+#container-body-ini-form {
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#container-body-ini-form .wrap {
+	display: table-cell;
+	vertical-align: middle;
+	width: 600px;
+}
+
+#container-body-ini-form #is-up-button {
+	border: 0;
+	padding: 0;
+	width: 136px;
+	font-size: 21px;
+	font-weight: 800;
+	display: inline-block;
+	background: #47ba42;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 50px;
+	height: 64px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+	cursor: pointer;
+	border-bottom: 3px solid #36a032;
+}
+#container-body-ini-form #is-up-button:hover {
+	background: #4dc447;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+#container-body-ini-form #is-up-button:active {
+	background: #41b03c;
+}
+
+#is-up-block-inner #find-more-button {
+	border: 0;
+	padding: 0;
+	width: 150px;
+	font-size: 21px;
+	font-weight: 800;
+	display: inline-block;
+	background: #F77016;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 50px;
+	height: 50px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+	cursor: pointer;
+	margin-left: 20px;
+	border-bottom: 2px solid #A75C0B;
+}
+
+#is-up-block-inner #find-more-button:hover {
+	background: #F38A44;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+#is-up-block-inner #find-more-button:active {
+	background: #C0530A;
+}
+
+#container-body-ini-form #txt-web-page {
+	width: 550px;
+	height: 35px;
+	font-size: 21px;
+	margin-right: 20px;
+	margin-top: 40px;
+}
+
+
+#container-body-ini-form .div-form{
+	width: 740px;
+	margin: auto;
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	position: relative;
+}
+
+#sign-in{
+	color: black;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position:absolute;
+	width: 675px;
+	background-color:rgba(255,255,255,0.3);
+}
+
+#sign-up{
+	color: black;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color:rgba(255,255,255,0.3);
+	margin-top: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position:absolute;
+	width: 675px;
+	left: -355px;
+}
+
+div#invalid-url{
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: 670px;
+	background: red;
+	padding: 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-image: url("../img/error-background.png");
+	border: 1px solid yellow;
+	margin-top: 10px;
+}
+
+#try-on #txt-your-email-sign-up,#try-on #txt-your-email-sign-in{
+	width: 500px;
+	height: 25px;
+	font-size: 14px;
+}
+
+#try-on #sign-in-button,#try-on #sign-up-button {
+	margin-top: 10px;
+	border: 0;
+	padding: 0;
+	width: 100px;
+	font-size: 14px;
+	font-weight: 800;
+	display: inline-block;
+	background: #368B32;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 40px;
+	height: 40px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-shadow: rgba(0, 0, 0, 0.1) 0 1px 0;
+	cursor: pointer;
+}
+
+#container-top #container-top-text{
+	font-size: 30px;
+	color: #FFF;
+	padding-left: 80px;
+	padding-top: 60px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-shadow: black 0.1em 0.1em 0.2em
+}
+
+#thanksfull {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	padding: 0;
+	color: #fff;
+	background: #4c9cc4; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #4c9cc4 0%, #1773b1 48%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#4c9cc4), color-stop(48%,#1773b1)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #4c9cc4 0%,#1773b1 48%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #4c9cc4 0%,#1773b1 48%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #4c9cc4 0%,#1773b1 48%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #4c9cc4 0%,#1773b1 48%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c9cc4', endColorstr='#1773b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+#thanksfull_page{
+	display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#thanksfull_page .wrap {
+  display: table-cell;
+  vertical-align: middle;
+  width: 600px;
+}
+
+#thanksfull_page .text{
+	font-size: 40px;
+	line-height: 60px;
+	font-family: 'Love Ya Like A Sister', cursive;
+	text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#check-website{ 
+	font-size:51px; 
+	position:relative; 
+	font-family: 'Love Ya Like A Sister', cursive;
+	line-height:54px;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	width: 830px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+}
+#is-up-block{
+	font-size: 40px;
+	font-family: 'Love Ya Like A Sister', cursive;
+	line-height:54px;
+	text-align: center;
+}
+
+#is-up-block #is-up-block-inner{
+	font-size: 25px !important;
+	line-height:54px;
+	text-align: center;
+}
+
+#footer{
+	position: absolute;
+	height: 95px;
+	bottom: 0;
+	background: #0d66a2;
+	text-align: center;
+	width: 100%;
+}
+
+#footer-page-2{
+	position: absolute;
+	height: 95px;
+	bottom: 0;
+	background: #4691BB;
+	text-align: center;
+	width: 100%;
+}
+
+#footer-page-3{
+	position: absolute;
+	height: 95px;
+	bottom: 0;
+	background: #61A4C3;
+	text-align: center;
+	width: 100%;
+}
+
+.payment-methods .error-email{
+	color: rgb(187, 2, 2);
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: none;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 30px;
+}
+
+#close-sign-in{
+	width: 17px;
+	height: 17px;
+	float: right;
+	margin-top: -7px;
+	position: absolute;
+	right: 5px;
+	cursor: pointer;
+}
+
+#close-sign-up{
+	width: 17px;
+	height: 17px;
+	float: right;
+	margin-top: -7px;
+	position: absolute;
+	right: 5px;
+	cursor: pointer;
+}
